@@ -14,7 +14,8 @@ class Captchasnet
     @secret = secret
   end
 
-  # From: depth-first.com/articles/2007/09/03/fighting-spam-on-the-cheap-with-captcha-a-simple-ruby-library-for-captchas-net
+  # Originally written by Richard L. Apodaca
+  # http://depth-first.com/articles/2007/09/03/fighting-spam-on-the-cheap-with-captcha-a-simple-ruby-library-for-captchas-net
   def get_text(random, alphabet = 'abcdefghijklmnopqrstuvwxyz', character_count = 6)
     if character_count < 1 || character_count > 16
       raise "Character count of #{character_count} is outside the range of 1-16"
