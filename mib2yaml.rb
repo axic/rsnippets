@@ -10,7 +10,7 @@ module MIB2YAML
   def MIB2YAML.convert(module_file, mib_dir = '.')
     raise "smidump tool must be installed" unless import_supported?
     FileUtils.makedirs mib_dir
-    
+
     # find imports
     imports = ''
     File.read(module_file).to_a.each do |i|
@@ -19,7 +19,7 @@ module MIB2YAML
         imports += "-p #{import.gsub('FROM ','')}.mib "
       end
     end
-    
+
     mib_hash = `smidump -f python #{imports} #{module_file}`
     mib = eval_mib_data(mib_hash)
     if mib
@@ -43,9 +43,9 @@ module MIB2YAML
         puts "*** Import failed for: #{module_file} ***"
     end
   end
- 
+
   def MIB2YAML.import_supported?
-    `smidump --version` =~ /^smidump 0.4/  && $? == 0 
+    `smidump --version` =~ /^smidump 0.4/  && $? == 0
   end
 
   private
