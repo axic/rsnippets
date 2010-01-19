@@ -21,9 +21,14 @@ class JavaProperties
     output
   end
 
-  def add(key, value)
-    return unless key.length > 0 and value.length > 0
+  def add(key, value = nil)
+    return unless key.length > 0
     @properties[key] = value
+  end
+
+  def remove(key)
+    return unless key.length > 0
+    @properties.delete(key)
   end
 
   def save
