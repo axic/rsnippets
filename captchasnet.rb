@@ -1,5 +1,6 @@
 # Simple class for working with Captchas.net
 #
+# (C) 2007 Richard Apodaca
 # (C) 2009 Alex Beregszaszi
 #
 # $MIT License$
