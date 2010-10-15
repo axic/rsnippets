@@ -2,6 +2,8 @@
 #
 # Terms and conditions: http://asv.aso.ecei.tohoku.ac.jp/tesseract/terms.html
 #
+# Update: The tesseract-ocr is open source now: http://code.google.com/p/tesseract-ocr/
+#
 # (C) 2010 Alex Beregszaszi
 #
 # $MIT License$
