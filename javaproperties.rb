@@ -9,7 +9,7 @@ class JavaProperties
 
     begin
       IO.foreach(file) do |line|
-        @properties[$1.strip] = $2 if line = ~ /([^=]*)=(.*)\/\/(.*)/ || line =~ /([^=]*)=(.*)/
+        @properties[$1.strip] = $2 if line = ~ /^([^=]*)=(.*?)(\s*#.*)?$/
       end
     rescue
     end
