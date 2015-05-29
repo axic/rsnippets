@@ -13,7 +13,7 @@ module MIB2YAML
 
     # find imports
     imports = ''
-    File.read(module_file).to_a.each do |i|
+    File.read(module_file).lines.to_a.each do |i|
       import = i.slice(/FROM [\w-]+/)
       if import != nil
         imports += "-p #{import.gsub('FROM ','')}.mib "
